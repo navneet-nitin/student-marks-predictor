@@ -14,10 +14,10 @@ st.title("Student Marks Prediction 📊")
 st.subheader("Daily Schedule (Hours)")
 
 # 1. Hour-based Inputs
-study_hours = st.slider("Study Hours", 0.0, 12.0, 5.0)
-social_media = st.slider("Social Media Hours", 0.0, 10.0, 4.0)
-netflix = st.slider("Netflix Hours", 0.0, 10.0, 1.0)
-sleep = st.slider("Sleep Hours", 3.0, 12.0, 8.0)
+study_hours = st.slider("Study Hours", 0, 12, 5)
+social_media = st.slider("Social Media Hours", 0, 10, 4)
+netflix = st.slider("Netflix Hours", 0.0, 10, 1)
+sleep = st.slider("Sleep Hours", 3, 12, 8)
 
 # --- 24-HOUR VALIDATION LOGIC ---
 total_hours = study_hours + social_media + netflix + sleep
@@ -81,4 +81,5 @@ if st.button("Predict Score"):
         st.success(f"🎉 Amazing Job! Your predicted score is {final_result:.2f}%")
     else:
         st.snow()      # ❄️ Calm snow for lower scores (encouragement)
+
         st.info(f"❄️ Good effort! Your predicted score is {final_result:.2f}%")
