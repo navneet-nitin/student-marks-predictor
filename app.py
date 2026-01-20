@@ -16,7 +16,7 @@ st.subheader("Daily Schedule (Hours)")
 # 1. Hour-based Inputs
 study_hours = st.slider("Study Hours", 0, 12, 5)
 social_media = st.slider("Social Media Hours", 0, 10, 4)
-netflix = st.slider("Netflix Hours", 0.0, 10, 1)
+netflix = st.slider("Netflix Hours", 0, 10, 1)
 sleep = st.slider("Sleep Hours", 3, 12, 8)
 
 # --- 24-HOUR VALIDATION LOGIC ---
@@ -83,4 +83,5 @@ if st.button("Predict Score"):
         st.snow()      # ❄️ Calm snow for lower scores (encouragement)
 
         st.info(f"❄️ Good effort! Your predicted score is {final_result:.2f}%")
+
 
