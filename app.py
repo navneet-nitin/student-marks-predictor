@@ -23,7 +23,7 @@ sleep = st.slider("Sleep Hours", 3, 12, 8)
 total_hours = study_hours + social_media + netflix + sleep
 
 # Show a progress bar or metric for hours used
-st.write(f"**Total Hours Used:** {total_hours:.1f} / 24.0")
+st.write(f"**Total Hours Used:** {total_hours:.1f} / 24")
 
 if total_hours > 24:
     st.error(f"⚠️ Error: You have entered {total_hours} hours! A day only has 24 hours. Please reduce time in some activities.")
@@ -83,3 +83,4 @@ if st.button("Predict Score"):
         st.snow()      # ❄️ Calm snow for lower scores (encouragement)
 
         st.info(f"❄️ Good effort! Your predicted score is {final_result:.2f}%")
+
